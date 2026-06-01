@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="840" viewBox="0 0 1120 840" role="img" aria-label="Photo placeholder">
+  <rect width="1120" height="840" fill="#0d1b2a"/>
+  <circle cx="560" cy="350" r="120" fill="#152538" stroke="#243a52" stroke-width="6"/>
+  <rect x="380" y="500" width="360" height="220" rx="180" fill="#152538" stroke="#243a52" stroke-width="6"/>
+  <text x="560" y="790" font-family="Inter, system-ui, sans-serif" font-size="30" fill="#3a516b" text-anchor="middle">Replace with a photo of Nathan at /public/nathan.svg</text>
+</svg>

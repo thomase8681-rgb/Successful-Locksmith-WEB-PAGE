@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1280" viewBox="0 0 1920 1280" role="img" aria-label="Hero image placeholder">
+  <rect width="1920" height="1280" fill="#0d1b2a"/>
+  <rect x="760" y="340" width="400" height="660" rx="14" fill="#152538" stroke="#243a52" stroke-width="8"/>
+  <circle cx="1110" cy="690" r="15" fill="#f59e0b"/>
+  <rect x="1086" y="700" width="6" height="60" rx="3" fill="#f59e0b"/>
+  <text x="960" y="1120" font-family="Inter, system-ui, sans-serif" font-size="42" fill="#3a516b" text-anchor="middle">Replace with a real hero photo at /public/hero.svg</text>
+</svg>

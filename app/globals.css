@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  /* offset anchor targets so the sticky header doesn't cover section tops */
+  scroll-padding-top: 5rem;
+}
+
+body {
+  @apply bg-white text-navy-900 antialiased;
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-amber-600;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3.5 text-base font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-amber-500 text-navy-950 hover:bg-amber-400 focus-visible:ring-offset-navy-900;
+  }
+
+  .btn-secondary {
+    @apply btn border-2 border-white/30 bg-white/5 text-white hover:bg-white/10;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-navy-900/15 bg-white text-navy-900 hover:border-navy-900/30 hover:bg-navy-50;
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

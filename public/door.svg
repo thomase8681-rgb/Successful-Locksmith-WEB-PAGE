@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="840" viewBox="0 0 1120 840" role="img" aria-label="Door image placeholder">
+  <rect width="1120" height="840" fill="#0d1b2a"/>
+  <rect x="430" y="160" width="260" height="540" rx="8" fill="#152538" stroke="#243a52" stroke-width="6"/>
+  <circle cx="650" cy="430" r="12" fill="#f59e0b"/>
+  <text x="560" y="770" font-family="Inter, system-ui, sans-serif" font-size="30" fill="#3a516b" text-anchor="middle">Replace with a real photo at /public/door.svg</text>
+</svg>
