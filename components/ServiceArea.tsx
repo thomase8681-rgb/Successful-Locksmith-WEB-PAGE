@@ -1,17 +1,17 @@
+"use client";
+
 import { MapPin } from "lucide-react";
 import { SERVICE_AREAS, GOOGLE_MAPS_API_KEY } from "@/lib/constants";
+import { Reveal, FadeIn } from "@/components/ui/animations";
 
 export default function ServiceArea() {
-  // Google Maps Embed API URL, centred on Greater Manchester.
-  // Replace GOOGLE_MAPS_API_KEY in lib/constants.ts with a real key.
-  // Alternatively, paste a keyless "Share > Embed a map" iframe src from Google Maps.
   const mapSrc = `https://www.google.com/maps/embed/v1/place?key=${GOOGLE_MAPS_API_KEY}&q=Greater+Manchester,UK&zoom=10`;
 
   return (
     <section className="bg-navy-50 py-20 md:py-24">
       <div className="container-x">
         <div className="grid items-center gap-10 lg:grid-cols-2">
-          <div>
+          <Reveal>
             <span className="eyebrow">Service Area</span>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">
               Fast Response Across Greater Manchester
@@ -32,11 +32,9 @@ export default function ServiceArea() {
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
 
-          {/* Embedded map. With a placeholder key this shows a "for development"
-              overlay — that's expected until you add a real key. */}
-          <div className="overflow-hidden rounded-2xl border border-navy-900/10 shadow-xl">
+          <FadeIn delay={0.15} className="overflow-hidden rounded-2xl border border-navy-900/10 shadow-xl">
             <iframe
               title="Galvin Locksmiths service area — Greater Manchester"
               src={mapSrc}
@@ -45,7 +43,7 @@ export default function ServiceArea() {
               referrerPolicy="no-referrer-when-downgrade"
               allowFullScreen
             />
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

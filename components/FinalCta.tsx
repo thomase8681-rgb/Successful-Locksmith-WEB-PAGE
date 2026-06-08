@@ -1,6 +1,9 @@
+"use client";
+
 import { Phone } from "lucide-react";
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL } from "@/lib/constants";
 import { WhatsAppIcon } from "./Header";
+import { Reveal } from "@/components/ui/animations";
 
 export default function FinalCta() {
   return (
@@ -9,7 +12,7 @@ export default function FinalCta() {
         className="absolute inset-0 -z-10 bg-gradient-to-br from-navy-900 to-navy-950"
         aria-hidden="true"
       />
-      <div className="container-x text-center">
+      <Reveal className="container-x text-center">
         <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
           Need a locksmith in Manchester?
         </h2>
@@ -41,7 +44,7 @@ export default function FinalCta() {
             WhatsApp Us
           </a>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Unlock,
   KeyRound,
@@ -9,6 +11,7 @@ import {
   KeySquare,
   type LucideIcon,
 } from "lucide-react";
+import { Reveal, StaggerGrid, StaggerItem } from "@/components/ui/animations";
 
 type Service = {
   title: string;
@@ -71,7 +74,7 @@ export default function Services() {
   return (
     <section id="services" className="bg-white py-20 md:py-24">
       <div className="container-x">
-        <div className="mx-auto max-w-2xl text-center">
+        <Reveal className="mx-auto max-w-2xl text-center">
           <span className="eyebrow">What We Do</span>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">
             Complete Locksmith Services Across Manchester
@@ -80,14 +83,11 @@ export default function Services() {
             Whatever the lock, door or emergency — Galvin Locksmiths has it
             covered, with honest pricing and a fast local response.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <StaggerGrid className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {SERVICES.map((service) => (
-            <article
-              key={service.title}
-              className="group rounded-2xl border border-navy-900/10 bg-white p-6 transition-all hover:-translate-y-1 hover:border-amber-500/40 hover:shadow-lg"
-            >
+            <StaggerItem key={service.title} as="article" className="group rounded-2xl border border-navy-900/10 bg-white p-6 transition-all hover:-translate-y-1 hover:border-amber-500/40 hover:shadow-lg">
               <span className="grid h-12 w-12 place-items-center rounded-xl bg-navy-900 text-amber-500 transition-colors group-hover:bg-amber-500 group-hover:text-navy-950">
                 <service.icon className="h-6 w-6" aria-hidden="true" />
               </span>
@@ -97,9 +97,9 @@ export default function Services() {
               <p className="mt-2 text-sm leading-relaxed text-navy-900/70">
                 {service.description}
               </p>
-            </article>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerGrid>
       </div>
     </section>
   );

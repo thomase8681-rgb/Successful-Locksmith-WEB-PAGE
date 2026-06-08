@@ -1,6 +1,9 @@
+"use client";
+
 import { Check, Phone } from "lucide-react";
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL } from "@/lib/constants";
 import { WhatsAppIcon } from "./Header";
+import { Reveal, ScaleIn } from "@/components/ui/animations";
 
 const CHECKLIST = [
   "No call-out fee, ever",
@@ -14,16 +17,15 @@ export default function Pricing() {
   return (
     <section className="bg-navy-50 py-20 md:py-24">
       <div className="container-x">
-        <div className="mx-auto max-w-2xl text-center">
+        <Reveal className="mx-auto max-w-2xl text-center">
           <span className="eyebrow">Transparent Pricing</span>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">
             Honest Prices – No Surprises
           </h2>
-        </div>
+        </Reveal>
 
-        <div className="mx-auto mt-12 max-w-4xl overflow-hidden rounded-3xl border border-navy-900/10 bg-white shadow-xl">
+        <ScaleIn delay={0.1} className="mx-auto mt-12 max-w-4xl overflow-hidden rounded-3xl border border-navy-900/10 bg-white shadow-xl">
           <div className="grid md:grid-cols-2">
-            {/* Price highlight */}
             <div className="flex flex-col justify-center bg-navy-900 p-8 text-center text-white md:p-10">
               <p className="text-sm font-semibold uppercase tracking-wider text-amber-500">
                 Typical job
@@ -39,7 +41,6 @@ export default function Pricing() {
               </p>
             </div>
 
-            {/* Checklist + CTAs */}
             <div className="p-8 md:p-10">
               <ul className="space-y-4">
                 {CHECKLIST.map((item) => (
@@ -69,7 +70,7 @@ export default function Pricing() {
               </div>
             </div>
           </div>
-        </div>
+        </ScaleIn>
       </div>
     </section>
   );

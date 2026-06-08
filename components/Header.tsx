@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { Menu, X, Phone, KeyRound } from "lucide-react";
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL, NAV_LINKS } from "@/lib/constants";
 
@@ -25,7 +26,12 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-navy-900/95 backdrop-blur supports-[backdrop-filter]:bg-navy-900/80">
+    <motion.header
+      className="sticky top-0 z-50 border-b border-white/10 bg-navy-900/95 backdrop-blur supports-[backdrop-filter]:bg-navy-900/80"
+      initial={{ y: -64, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.45, ease: [0.21, 0.47, 0.32, 0.98] }}
+    >
       <div className="container-x flex h-16 items-center justify-between gap-4 md:h-20">
         {/* Logo (placeholder — swap text/icon for a real logo SVG) */}
         <a href="#top" className="flex items-center gap-2 text-white" aria-label="Galvin Locksmiths home">
@@ -124,7 +130,7 @@ export default function Header() {
           </nav>
         </div>
       )}
-    </header>
+    </motion.header>
   );
 }
 
