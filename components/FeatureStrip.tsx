@@ -40,7 +40,7 @@ export default function FeatureStrip() {
 
           <SlideRight delay={0.1} className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-navy-900 shadow-xl">
             <Image
-              src="/door.svg"
+              src="/door.png"
               alt="Locksmith realigning a front door after a lock change"
               fill
               sizes="(min-width: 1024px) 560px, 100vw"

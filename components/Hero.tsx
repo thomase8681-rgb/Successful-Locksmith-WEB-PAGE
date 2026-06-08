@@ -27,12 +27,12 @@ export default function Hero() {
         transition={{ duration: 1.6, ease: "easeOut" }}
       >
         <Image
-          src="/hero.svg"
+          src="/hero.png"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="h-full w-full object-cover opacity-30"
+          className="h-full w-full object-cover opacity-40"
         />
       </motion.div>
 
